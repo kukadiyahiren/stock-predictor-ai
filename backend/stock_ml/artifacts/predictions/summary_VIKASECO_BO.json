@@ -1,0 +1,31 @@
+{
+  "run_id": "ae96020c-1fb8-4866-b15d-4b432c926339",
+  "model_version": "v2026.04.07.110635",
+  "trained_at": "2026-04-07T11:07:12.685919",
+  "ticker": "VIKASECO.BO",
+  "xgboost_metrics": {
+    "accuracy": 0.4672131147540984,
+    "precision": 0.33121019108280253,
+    "recall": 0.6753246753246753
+  },
+  "lstm_metrics": {
+    "mae": 0.0823593152605969,
+    "rmse": 0.11020144282995295
+  },
+  "backtest": {
+    "strategy_total_return_pct": -28.662370744413913,
+    "buy_hold_total_return_pct": -47.679321965695856,
+    "alpha_pct": 19.016951221281943
+  },
+  "latest_prediction": {
+    "close": 1.24,
+    "signal": "UP",
+    "lstm_pred_close": 1.0518
+  },
+  "artifacts": {
+    "predictions_csv": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/predictions/predictions_VIKASECO_BO.csv",
+    "plot_file": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/plots/lstm_pred_vs_actual_VIKASECO_BO.png",
+    "xgb_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/xgb_VIKASECO_BO.joblib",
+    "lstm_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/lstm_VIKASECO_BO.keras"
+  }
+}

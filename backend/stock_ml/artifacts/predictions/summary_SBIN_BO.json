@@ -1,0 +1,31 @@
+{
+  "run_id": "82c98b96-ec7a-407b-9d5c-1173e5a99e95",
+  "model_version": "v2026.04.07.085144",
+  "trained_at": "2026-04-07T08:52:21.297558",
+  "ticker": "SBIN.BO",
+  "xgboost_metrics": {
+    "accuracy": 0.5,
+    "precision": 0.5818181818181818,
+    "recall": 0.24427480916030533
+  },
+  "lstm_metrics": {
+    "mae": 80.33398105787194,
+    "rmse": 107.94673738670662
+  },
+  "backtest": {
+    "strategy_total_return_pct": 8.474150461427232,
+    "buy_hold_total_return_pct": 34.38963971942908,
+    "alpha_pct": -25.915489258001845
+  },
+  "latest_prediction": {
+    "close": 1032.65,
+    "signal": "DOWN",
+    "lstm_pred_close": 921.2388
+  },
+  "artifacts": {
+    "predictions_csv": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/predictions/predictions_SBIN_BO.csv",
+    "plot_file": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/plots/lstm_pred_vs_actual_SBIN_BO.png",
+    "xgb_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/xgb_SBIN_BO.joblib",
+    "lstm_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/lstm_SBIN_BO.keras"
+  }
+}

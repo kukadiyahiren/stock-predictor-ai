@@ -1,0 +1,31 @@
+{
+  "run_id": "277f2e7b-fc73-4014-8538-6df8a4084249",
+  "model_version": "v2026.04.07.110448",
+  "trained_at": "2026-04-07T11:05:04.034132",
+  "ticker": "BAJAJHFL.NS",
+  "xgboost_metrics": {
+    "accuracy": 0.6623376623376623,
+    "precision": 0.5454545454545454,
+    "recall": 0.2222222222222222
+  },
+  "lstm_metrics": {
+    "mae": 7.6605211145737595,
+    "rmse": 8.098254594469225
+  },
+  "backtest": {
+    "strategy_total_return_pct": 9.039587346049949,
+    "buy_hold_total_return_pct": -16.844082071647325,
+    "alpha_pct": 25.883669417697273
+  },
+  "latest_prediction": {
+    "close": 79.68,
+    "signal": "DOWN",
+    "lstm_pred_close": 86.8301
+  },
+  "artifacts": {
+    "predictions_csv": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/predictions/predictions_BAJAJHFL_NS.csv",
+    "plot_file": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/plots/lstm_pred_vs_actual_BAJAJHFL_NS.png",
+    "xgb_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/xgb_BAJAJHFL_NS.joblib",
+    "lstm_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/lstm_BAJAJHFL_NS.keras"
+  }
+}

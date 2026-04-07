@@ -1,0 +1,31 @@
+{
+  "run_id": "4e814ad6-f74a-4d0c-bd72-95f8358110d6",
+  "model_version": "v2026.04.07.110503",
+  "trained_at": "2026-04-07T11:05:43.700333",
+  "ticker": "TRIDENT.BO",
+  "xgboost_metrics": {
+    "accuracy": 0.5204918032786885,
+    "precision": 0.46153846153846156,
+    "recall": 0.6226415094339622
+  },
+  "lstm_metrics": {
+    "mae": 0.6594175877778427,
+    "rmse": 0.9120067427229229
+  },
+  "backtest": {
+    "strategy_total_return_pct": 4.308376620630772,
+    "buy_hold_total_return_pct": -5.832037480736374,
+    "alpha_pct": 10.140414101367146
+  },
+  "latest_prediction": {
+    "close": 24.22,
+    "signal": "DOWN",
+    "lstm_pred_close": 23.7131
+  },
+  "artifacts": {
+    "predictions_csv": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/predictions/predictions_TRIDENT_BO.csv",
+    "plot_file": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/plots/lstm_pred_vs_actual_TRIDENT_BO.png",
+    "xgb_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/xgb_TRIDENT_BO.joblib",
+    "lstm_model": "/home/hiren/Documents/prediction/backend/stock_ml/artifacts/lstm_TRIDENT_BO.keras"
+  }
+}
