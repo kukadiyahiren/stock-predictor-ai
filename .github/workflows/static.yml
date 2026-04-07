@@ -1,15 +1,36 @@
-name: Deploy static content
+name: Deploy React App
 
 on:
   push:
     branches: ["main"]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/upload-pages-artifact@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          path: '.'
-      - uses: actions/deploy-pages@v1
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build project
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Deploy to Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: frontend/build
+
+      - name: Deploy
+        uses: actions/deploy-pages@v1
