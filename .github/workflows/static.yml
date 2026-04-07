@@ -1,0 +1,15 @@
+name: Deploy static content
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'
+      - uses: actions/deploy-pages@v1
