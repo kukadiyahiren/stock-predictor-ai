@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stock Predictor AI - Advanced stock market forecasting using XGBoost and LSTM machine learning models. Get real-time trends, detailed technical analysis, and intelligent trading insights.">
+    <meta name="keywords" content="Stock Prediction, AI, Machine Learning, XGBoost, LSTM, Financial Analytics, Trading Insights, Market Trends">
+    <meta name="author" content="kukadiyahiren">
+    
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/kukadiyahiren/stock-predictor-ai">
+    <meta property="og:title" content="Stock Predictor AI | Advanced Market Intelligence">
+    <meta property="og:description" content="Unlock the power of AI for your stock market strategy. Real-time forecasting and backtested models for smart trading.">
+    <meta property="og:image" content="https://github.com/kukadiyahiren/stock-predictor-ai/blob/main/social_preview.png?raw=true">
+
+    <title>Stock Predictor AI | Intelligent Market Forecasting & Analytics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-deep: #020617;
+            --bg-glass: rgba(15, 23, 42, 0.7);
+            --primary: #10b981;
+            --primary-glow: rgba(16, 185, 129, 0.3);
+            --accent: #6366f1;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            position: relative;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: var(--primary);
+            text-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        .btn-secondary {
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 24px;
+            transition: transform 0.3s;
+            backdrop-filter: blur(20px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .card .icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-dim);
+        }
+
+        .stats-banner {
+            background: linear-gradient(to right, var(--bg-glass), rgba(99, 102, 241, 0.05));
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-around;
+            padding: 60px;
+            margin-top: 50px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        footer {
+            padding: 60px 40px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            margin-top: 100px;
+            color: var(--text-dim);
+        }
+
+        .animate-up {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 20px; }
+            .nav-links { display: none; }
+            .stats-banner { flex-direction: column; gap: 40px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i data-lucide="trending-up"></i>
+                Stock Predictor AI
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#tech">Technologies</a>
+                <a href="https://github.com/kukadiyahiren/stock-predictor-ai">Source Code</a>
+            </div>
+        </div>
+
+        <h1 class="animate-up">Predict Markets <br> with <span class="highlight">Intelligence</span></h1>
+        <p class="subtitle animate-up" style="animation-delay: 0.2s">
+            Harness the power of XGBoost and LSTM neural networks to forecast stock prices with professional-grade accuracy.
+        </p>
+        
+        <div class="cta-buttons animate-up" style="animation-delay: 0.4s">
+            <a href="https://github.com/kukadiyahiren/stock-predictor-ai" class="btn btn-primary">
+                <i data-lucide="github"></i> Explore Repo
+            </a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="section-title">
+            <h2>Core Features</h2>
+            <p style="color: var(--text-dim)">Built for precision and clarity</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="icon-box"><i data-lucide="brain-circuit"></i></div>
+                <h3>AI Model Blending</h3>
+                <p>Combines XGBoost classification for trend direction and LSTM sequence models for precise price target forecasting.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box"><i data-lucide="bar-chart-3"></i></div>
+                <h3>Backtesting Engine</h3>
+                <p>Validate your strategy against historical data. Our engine compares model alerts against "Buy & Hold" for true alpha detection.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box"><i data-lucide="file-text"></i></div>
+                <h3>Technical Reports</h3>
+                <p>Generate professional PDF reports with confidence bands, volatility benchmarks, and multi-horizon market highlights.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech">
+        <div class="section-title">
+            <h2>Tech Stack</h2>
+            <p style="color: var(--text-dim)">Modern technologies for scalable performance</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <i data-lucide="server" style="color: var(--accent); margin-bottom: 20px"></i>
+                <h3>Robust Backend</h3>
+                <p>Python FastAPI, SQLAlchemy, and Alembic migrations ensure a high-performance and reliable data layer.</p>
+            </div>
+            <div class="card">
+                <i data-lucide="layout" style="color: var(--accent); margin-bottom: 20px"></i>
+                <h3>Interactive UI</h3>
+                <p>Vite-powered React application with Recharts providing fluid, responsive data visualization.</p>
+            </div>
+        </div>
+
+        <div class="stats-banner">
+            <div class="stat-item">
+                <h4>93%</h4>
+                <p>Confidence Target</p>
+            </div>
+            <div class="stat-item">
+                <h4>6+</h4>
+                <p>Time Horizons</p>
+            </div>
+            <div class="stat-item">
+                <h4>LIVE</h4>
+                <p>Market Data</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Stock Predictor AI Project. Developed by <a href="https://github.com/kukadiyahiren" style="color: var(--primary)">kukadiyahiren</a></p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.5;">Disclaimer: Financial software is for educational purposes only.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const top = card.getBoundingClientRect().top;
+                if (top < window.innerHeight - 100) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
