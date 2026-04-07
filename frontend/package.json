@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "homepage": "https://kukadiyahiren.github.io/stock-predictor-ai",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
