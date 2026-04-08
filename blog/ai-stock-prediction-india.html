@@ -267,12 +267,13 @@
     </article>
 
     <footer>
-        <p>&copy; 2026 Stock Predictor AI Project. Developed by <a href="https://github.com/kukadiyahiren"
-                style="color: var(--primary)">kukadiyahiren</a></p>
+        <p>&copy; <span id="year"></span> Stock Predictor AI Project. Developed by <a href="https://github.com/kukadiyahiren"
+                style="color: var(--primary)">Hiren Kukadiya</a></p>
     </footer>
 
     <script>
         lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 

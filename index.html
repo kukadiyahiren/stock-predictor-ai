@@ -412,8 +412,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Stock Predictor AI Project. Developed by <a href="https://github.com/kukadiyahiren"
-                style="color: var(--primary)">kukadiyahiren</a></p>
+        <p>&copy; <span id="year"></span> Stock Predictor AI Project. Developed by <a href="https://github.com/kukadiyahiren"
+                style="color: var(--primary)">Hiren Kukadiya</a></p>
         <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.5;">Disclaimer: Financial software is for educational
             purposes only.</p>
     </footer>
@@ -421,6 +421,9 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Update year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
         // Simple scroll reveal
         window.addEventListener('scroll', () => {
