@@ -21,7 +21,8 @@
     <title>How to Predict Stocks Using AI | Stock Predictor AI Blog</title>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23020617%22/><path d=%22M20 70 L40 50 L60 60 L80 30%22 fill=%22none%22 stroke=%22%2310b981%22 stroke-width=%2210%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23020617%22/><path d=%22M20 70 L40 50 L60 60 L80 30%22 fill=%22none%22 stroke=%22%2310b981%22 stroke-width=%2210%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,7 +148,8 @@
             color: #cbd5e1;
         }
 
-        .content ul, .content ol {
+        .content ul,
+        .content ol {
             margin-bottom: 25px;
             padding-left: 20px;
         }
@@ -202,8 +204,8 @@
             Stock Predictor AI
         </a>
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/blog/ai-stock-prediction-india.html">Previous Post</a>
+            <a href="/stock-predictor-ai">Home</a>
+            <a href="/stock-predictor-ai/blog/ai-stock-prediction-india.html">Previous Post</a>
         </div>
     </nav>
 
@@ -219,17 +221,22 @@
 
         <section class="content">
             <p>
-                The dream of every trader is to find a reliable way to glimpse into the future of price movements. While perfect foresight is impossible, modern data science provides us with the tools to build highly accurate "what-if" scenarios. Here is a definitive guide on **how to predict stocks using AI**.
+                The dream of every trader is to find a reliable way to glimpse into the future of price movements. While
+                perfect foresight is impossible, modern data science provides us with the tools to build highly accurate
+                "what-if" scenarios. Here is a definitive guide on **how to predict stocks using AI**.
             </p>
 
             <h2>Step 1: Data Acquisition</h2>
             <p>
-                AI is only as good as the data it's fed. For stock prediction, you need high-quality historical data, including Open, High, Low, Close (OHLC) prices, and Volume. Tools like Yahoo Finance API or Alpha Vantage are great starting points.
+                AI is only as good as the data it's fed. For stock prediction, you need high-quality historical data,
+                including Open, High, Low, Close (OHLC) prices, and Volume. Tools like Yahoo Finance API or Alpha
+                Vantage are great starting points.
             </p>
 
             <h2>Step 2: Feature Engineering</h2>
             <p>
-                Raw price data isn't enough. You need to create "features" that help the model understand the market context. Common features include:
+                Raw price data isn't enough. You need to create "features" that help the model understand the market
+                context. Common features include:
             </p>
             <ul>
                 <li><strong>Moving Averages (SMA/EMA):</strong> To identify trends.</li>
@@ -242,26 +249,34 @@
             <p>
                 Not all AI models are created equal for financial data. In our project, we use a hybrid approach:
             </p>
-            
+
             <h3>XGBoost for Classification</h3>
-            <p>XGBoost (Extreme Gradient Boosting) is excellent at deciding whether the stock will go UP or DOWN. It handles structured data and non-linear relationships better than almost any other algorithm.</p>
-            
+            <p>XGBoost (Extreme Gradient Boosting) is excellent at deciding whether the stock will go UP or DOWN. It
+                handles structured data and non-linear relationships better than almost any other algorithm.</p>
+
             <h3>LSTM for Sequence Prediction</h3>
-            <p>LSTMs (Long Short-Term Memory) are a type of Recurrent Neural Network (RNN) designed to remember long-term dependencies. They are perfect for time-series data like stock prices because they can "remember" what happened 50 days ago vs yesterday.</p>
+            <p>LSTMs (Long Short-Term Memory) are a type of Recurrent Neural Network (RNN) designed to remember
+                long-term dependencies. They are perfect for time-series data like stock prices because they can
+                "remember" what happened 50 days ago vs yesterday.</p>
 
             <h2>Step 4: Training and Backtesting</h2>
             <p>
-                Once your model is built, you must test it on data it has never seen before. This is called **backtesting**. If your model shows a profit on historical data, it's a good sign, but watch out for "overfitting" — where the model memorizes the past but fails to adapt to the future.
+                Once your model is built, you must test it on data it has never seen before. This is called
+                **backtesting**. If your model shows a profit on historical data, it's a good sign, but watch out for
+                "overfitting" — where the model memorizes the past but fails to adapt to the future.
             </p>
 
             <h2>Step 5: Deployment and Real-time Analysis</h2>
             <p>
-                The final step is to hook your model up to a live data feed. This allows it to generate signals in real-time, helping you make data-driven decisions as the market moves.
+                The final step is to hook your model up to a live data feed. This allows it to generate signals in
+                real-time, helping you make data-driven decisions as the market moves.
             </p>
 
             <h2>Conclusion</h2>
             <p>
-                Predicting stocks using AI is a journey of continuous refinement. By combining broad market data with specialized models, you can move away from "gut feelings" and towards quantitative, evidence-based trading.
+                Predicting stocks using AI is a journey of continuous refinement. By combining broad market data with
+                specialized models, you can move away from "gut feelings" and towards quantitative, evidence-based
+                trading.
             </p>
         </section>
 
