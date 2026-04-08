@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Sitemaps
+Sitemap: https://kukadiyahiren.github.io/stock-predictor-ai/sitemap.xml

@@ -112,4 +112,21 @@ The system automatically retrains models on a scheduled interval (default: 24h).
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
+## 🔍 SEO & Indexing
+
+To maintain high search engine visibility, we've implemented professional SEO configurations:
+
+- **`robots.txt`**: Located in the root directory, configured to allow indexing of all main pages while protecting the `/admin` route.
+- **`sitemap.xml`**: Located in the root directory, contains all major routes with appropriate priorities.
+- **Force Indexing**: Use the provided `ping_search_engines.sh` script to manually trigger a re-crawl.
+
+### Fast Indexing Workflow
+1. Update your content.
+2. Run the trigger:
+   ```bash
+   ./ping_search_engines.sh
+   ```
+3. (Optional) For guaranteed "Instant" indexing, use the **Google Search Console** "URL Inspection" tool to request a crawl.
+
+---
 *Disclaimer: This tool is for educational and research purposes only. Stock market investments are subject to market risks. Always consult with a financial advisor before making investment decisions.*
