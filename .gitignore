@@ -36,5 +36,5 @@ build/
 *.sln
 *.sw?
 
-backend/stock_ml/artifacts/
-backend/stock_ml/data/
+backend/stock_ml/artifacts/*
+backend/stock_ml/data/*
