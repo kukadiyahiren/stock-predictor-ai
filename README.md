@@ -130,3 +130,5 @@ To maintain high search engine visibility, we've implemented professional SEO co
 
 ---
 *Disclaimer: This tool is for educational and research purposes only. Stock market investments are subject to market risks. Always consult with a financial advisor before making investment decisions.*
+
+https://kukadiyahiren.github.io/stock-predictor-ai/
