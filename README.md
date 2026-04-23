@@ -2,7 +2,7 @@
 
 **Stock Predictor AI** is a state-of-the-art, full-stack stock market prediction platform. It combines the power of Machine Learning (XGBoost & LSTM) with a modern React dashboard to provide intelligent trading insights, real-time price forecasting, and comprehensive backtesting reports.
 
----
+- **Overview**: [DEMO](https://kukadiyahiren.github.io/stock-predictor-ai/)
 
 ## ✨ Key Features
 
@@ -131,4 +131,4 @@ To maintain high search engine visibility, we've implemented professional SEO co
 ---
 *Disclaimer: This tool is for educational and research purposes only. Stock market investments are subject to market risks. Always consult with a financial advisor before making investment decisions.*
 
-https://kukadiyahiren.github.io/stock-predictor-ai/
+
